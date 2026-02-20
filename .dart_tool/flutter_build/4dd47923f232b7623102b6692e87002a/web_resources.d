@@ -1,0 +1,1 @@
+ /Users/marack/Desktop/azim_portfolio/build/web/manifest.json:  /Users/marack/Desktop/azim_portfolio/web/index.html /Users/marack/Desktop/azim_portfolio/web/manifest.json
