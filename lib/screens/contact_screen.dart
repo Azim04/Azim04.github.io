@@ -6,6 +6,7 @@
 // Success state morphs the submit button into an animated checkmark.
 // Social link icons scale/glow on hover for desktop; provide ripple on mobile.
 
+import 'package:azim_portfolio/utils/print_log.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -41,6 +42,7 @@ class _ContactScreenState extends ConsumerState<ContactScreen> {
   }
 
   Future<void> _submitForm() async {
+    Print.greenLog('Submitting Form');
     if (!_formKey.currentState!.validate()) return;
 
     ref.read(contactFormStateProvider.notifier).state =
@@ -49,12 +51,18 @@ class _ContactScreenState extends ConsumerState<ContactScreen> {
     try {
       final response = await http.post(
         Uri.parse('https://formspree.io/f/$_kFormspreeId'),
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+          'Accept': 'application/json',
+        },
         body: {
           'name': _nameController.text.trim(),
           'email': _emailController.text.trim(),
           'message': _messageController.text.trim(),
         },
       );
+
+      Print.greenLog('Form submission response: ${response.statusCode}');
 
       if (response.statusCode == 200) {
         ref.read(contactFormStateProvider.notifier).state =
@@ -73,7 +81,8 @@ class _ContactScreenState extends ConsumerState<ContactScreen> {
         ref.read(contactFormStateProvider.notifier).state =
             ContactFormState.error;
       }
-    } catch (_) {
+    } catch (e) {
+      Print.errorLog('Form Submission Error: $e');
       ref.read(contactFormStateProvider.notifier).state =
           ContactFormState.error;
     }

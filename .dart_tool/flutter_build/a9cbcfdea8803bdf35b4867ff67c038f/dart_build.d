@@ -1,0 +1,1 @@
+ /Users/marack/Desktop/azim_portfolio/.dart_tool/flutter_build/a9cbcfdea8803bdf35b4867ff67c038f/dart_build_result.json:  /Users/marack/Desktop/azim_portfolio/.dart_tool/package_config.json /Users/marack/Desktop/azim_portfolio/pubspec.yaml /opt/homebrew/share/flutter/bin/cache/dart-sdk/version

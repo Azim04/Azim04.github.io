@@ -3,14 +3,16 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"flutter_bootstrap.js": "a15182b6c1ff022373d3163e6e83557d",
+const RESOURCES = {"flutter_bootstrap.js": "66a7c694ce199113c69790317d6267de",
 "version.json": "5e0fdb582ae7bcf4adebd29b1d58fd6f",
-"index.html": "485cc8d6158d549c6de32c18b53de9c4",
-"/": "485cc8d6158d549c6de32c18b53de9c4",
-"main.dart.js": "78c7439567583d40a6ec76e19588e7f3",
+"index.html": "59782d72cfc30bf6bcd91998c9f2a0a4",
+"/": "59782d72cfc30bf6bcd91998c9f2a0a4",
+"main.dart.js": "f54fe097bcb12ea0f8c109f1b2b5f2f8",
 "flutter.js": "24bc71911b75b5f8135c949e27a2984e",
+"main.dart.mjs": "891b412e5d610aa8fc8452e2ac9c1636",
 "manifest.json": "697e07b67ac64de7eed60617a5bd09f7",
-"assets/NOTICES": "a2a0334ef287ef8c1018bbbec3b444a7",
+"main.dart.wasm": "1b392477f7e8ece498144c14a6080c0d",
+"assets/NOTICES": "f046976fbec1914ced33085e9316528f",
 "assets/FontManifest.json": "2a3f09429db12146b660976774660777",
 "assets/AssetManifest.bin.json": "493d7e3d07a0c281deffbe14ed0e03e6",
 "assets/packages/font_awesome_flutter/lib/fonts/Font-Awesome-7-Free-Regular-400.otf": "4094ba3f7b468d1fbcb8a4c03cdd1673",
@@ -38,6 +40,8 @@ const RESOURCES = {"flutter_bootstrap.js": "a15182b6c1ff022373d3163e6e83557d",
 // The application shell files that are downloaded before a service worker can
 // start.
 const CORE = ["main.dart.js",
+"main.dart.wasm",
+"main.dart.mjs",
 "index.html",
 "flutter_bootstrap.js",
 "assets/AssetManifest.bin.json",
