@@ -8,6 +8,7 @@
 
 import 'package:azim_portfolio/providers/screen_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_riverpod/legacy.dart';
 import '../models/github_repo.dart';
 import '../services/github_service.dart';
 

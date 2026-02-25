@@ -6,6 +6,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_riverpod/misc.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:azim_portfolio/main.dart';
@@ -18,7 +19,8 @@ import 'package:azim_portfolio/screens/main_shell.dart';
 
 /// Wraps [child] in the minimum widget tree required:
 /// ProviderScope + MaterialApp with the dark theme.
-Widget buildTestableWidget(Widget child, {List<Override> overrides = const []}) {
+Widget buildTestableWidget(Widget child,
+    {List<Override> overrides = const []}) {
   return ProviderScope(
     overrides: overrides,
     child: MaterialApp(
