@@ -27,6 +27,8 @@ jobs:
         run: flutter build web --release --wasm --base-href "/"
 
       - name: Deploy to GitHub Pages
-        uses: bluefireteam/flutter-gh-pages@v7
+        uses: JamesIves/github-pages-deploy-action@v4  # ← Updated & reliable
         with:
-          baseHref: "/"
+          folder: build/web          
+          branch: gh-pages           
+          clean: true                
